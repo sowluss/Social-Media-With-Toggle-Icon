@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #543e5c;
+}
+
+.share {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: .5s;
+  background: #fff0f8;
+}
+
+.share.active {
+  width: 300px;
+  height: 270px;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,.4); 
+}
+
+
+.share .toggle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #cca2e1;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.share.active .toggle {
+  bottom: -25px;
+}
+
+.share .toggle::before {
+  content: '\f1e0';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-family: fontAwesome;
+  color: #543e5c;
+  font-size: 24px;
+}
+
+.share.active .toggle::before {
+  content: '\f00d';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-family: fontAwesome;
+  color: #543e5c;
+  font-size: 24px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  transform: scale(0);
+  background: #fff0f8;
+}
+
+.share.active ul {
+  transform: scale(1);
+  transition: .5s;
+  transition-delay: .5s;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #262626;
+  transition: .5s;
+}
+
+ul li a:hover {
+  color: #cca2e1;
+  background: #262626;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 5px 5px rgba(0,0,0,.5);
+} 
+
+ul li a .fab, .far {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  border: 1px solid black;
+  
+}
